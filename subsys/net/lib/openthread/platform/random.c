@@ -7,7 +7,7 @@
 #include <kernel.h>
 #include <string.h>
 
-#include <openthread/platform/random.h>
+#include <openthread/platform/entropy.h>
 
 #include "platform-zephyr.h"
 
@@ -16,7 +16,7 @@ uint32_t otPlatRandomGet(void)
 	return sys_rand32_get();
 }
 
-otError otPlatRandomGetTrue(u8_t *aOutput, u16_t aOutputLength)
+otError otPlatEntropyGet(u8_t *aOutput, u16_t aOutputLength)
 {
 	int i;
 	u32_t random;

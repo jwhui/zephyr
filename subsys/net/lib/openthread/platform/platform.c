@@ -22,12 +22,12 @@ void otSysInit(int argc, char *argv[])
 	ARG_UNUSED(argv);
 
 	platformAlarmInit();
-	platformRadioInit();
+	// platformRadioInit();
 }
 
 void otSysProcessDrivers(otInstance *aInstance)
 {
-	platformRadioProcess(aInstance);
+        // platformRadioProcess(aInstance);
 	platformAlarmProcess(aInstance);
 }
 
